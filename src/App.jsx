@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import useSwitch from "./hooks/useSwitch"
+import useDate from "./hooks/useDate"
 
 function App() {
+  //snack 1
   const [isOn, toggle] = useSwitch()
-  console.log(isOn)
+
+  //snack 2
+  const currentDate = useDate()
+
   return (
     <>
       <div className='snack'>
@@ -18,7 +23,7 @@ function App() {
       <div className='snack'>
         <h1>SNACK-2</h1>
         <div className='snack-content'>
-
+          {currentDate.day} {currentDate.hours}
         </div>
       </div>
 
