@@ -23,7 +23,8 @@ function App() {
       <div className='snack'>
         <h1>SNACK-2</h1>
         <div className='snack-content'>
-          {currentDate.day} {currentDate.hours}
+          <h1>Data e ora attuali:</h1>
+          <p>{currentDate.toLocaleString()}</p>
         </div>
       </div>
 
