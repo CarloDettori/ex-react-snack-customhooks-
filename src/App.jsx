@@ -25,8 +25,9 @@ function App() {
       <div className='snack'>
         <h1>SNACK-1</h1>
         <div className='snack-content'>
-          <h3>{isOn ? "true" : "false"}</h3>
-          <button onClick={toggle}>opposite</button>
+          <p>Il valore è: </p>
+          <h3>{isOn ? "ON" : "OFF"}</h3>
+          <button onClick={toggle}>Switch</button>
         </div>
       </div>
 
