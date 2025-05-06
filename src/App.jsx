@@ -3,8 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import useSwitch from "./hooks/useSwitch.jsx"
 import useDate from "./hooks/useDate.jsx"
 import useCustomPointer from './hooks/useCustomPointer.jsx'
+import useKeyPress from './hooks/useKeyPress.jsx'
 
 function App() {
+
   //SNACK 1
   const [isOn, toggle] = useSwitch()
 
@@ -15,7 +17,7 @@ function App() {
   const customPointer = useCustomPointer("https://emoji.beeimg.com/🚀/32/microsoft")
 
   //SNACK BONUS
-
+  const isEnterPressed = useKeyPress("Enter")
 
   return (
     <>
@@ -33,7 +35,7 @@ function App() {
         <h1>SNACK-2</h1>
         <div className='snack-content'>
           <h1>Data e ora attuali:</h1>
-          {/* <p>{currentDate.toLocaleString()}</p> */}
+          <p>{currentDate.toLocaleString()}</p>
         </div>
       </div>
 
@@ -51,7 +53,8 @@ function App() {
       <div className='snack'>
         <h1>SNACK-BONUS</h1>
         <div className='snack-content'>
-
+          <h1>Tieni premuto "Enter" per testare il custom hook</h1>
+          <p>{isEnterPressed ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
         </div>
       </div>
     </>
