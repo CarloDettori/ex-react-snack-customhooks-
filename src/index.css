@@ -1,7 +1,8 @@
 * {
     margin: 0 !important;
     background-color: #454545;
-    color: white
+    color: white;
+    cursor: none
 }
 
 button {
@@ -17,4 +18,9 @@ button {
 
 .snack-content {
     padding: 40px
+}
+
+#cursor {
+    transform: rotate(-90deg);
+    position: fixed;
 }

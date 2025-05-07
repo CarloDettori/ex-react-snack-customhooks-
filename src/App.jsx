@@ -14,7 +14,7 @@ function App() {
   const currentDate = useDate()
 
   //SNACK 2
-  const customPointer = useCustomPointer("https://emoji.beeimg.com/🚀/32/microsoft")
+  const customPointer = useCustomPointer("🚀")
 
   //SNACK BONUS
   const isEnterPressed = useKeyPress("Enter")
@@ -35,7 +35,7 @@ function App() {
       <div className='snack'>
         <h1>SNACK-2</h1>
         <div className='snack-content'>
-          <h1>Data e ora attuali:</h1>
+          <h3>Data e ora attuali:</h3>
           <p>{currentDate.toLocaleString()}</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ function App() {
       <div className='snack'>
         <h1>SNACK-3</h1>
         <div className='snack-content'>
-          <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
+          <h3>Sposta il mouse per vedere il cursore personalizzato!</h3>
           {customPointer}
 
         </div>
@@ -54,7 +54,7 @@ function App() {
       <div className='snack'>
         <h1>SNACK-BONUS</h1>
         <div className='snack-content'>
-          <h1>Tieni premuto "Enter" per testare il custom hook</h1>
+          <h3>Tieni premuto "Enter" per testare il custom hook</h3>
           <p>{isEnterPressed ? "Enter premuto! ✅" : "Aspettando input... ⌨️"}</p>
         </div>
       </div>
