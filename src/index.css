@@ -1,13 +1,21 @@
 * {
     margin: 0 !important;
-    background-color: #454545;
+
     color: white;
     cursor: none
 }
 
+main {
+    background-color: #454545;
+}
+
 button {
     background-color: #131313;
+    color: white;
+
 }
+
+
 
 .snack {
     border-top: 1px solid white;
@@ -23,4 +31,12 @@ button {
 #cursor {
     transform: rotate(-90deg);
     position: fixed;
+}
+
+.cursor {
+    transform: rotate(-90deg);
+}
+
+.big-z {
+    z-index: 1000;
 }

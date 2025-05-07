@@ -10,10 +10,6 @@ export default function useCustomPointer(icon) {
         ))
     }, [])
     let child
-    return <span id="cursor" style={{ left: cursor[0], top: cursor[1] }}>{icon}</span>
-
-
-
-
+    return <span id="cursor" className='big-z' style={{ left: cursor[0], top: cursor[1] }}>{icon}</span>
 
 }
