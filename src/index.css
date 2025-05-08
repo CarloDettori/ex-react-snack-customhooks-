@@ -1,24 +1,39 @@
 * {
     margin: 0 !important;
-
+    padding: 0;
+    box-sizing: border-box;
     color: white;
-    cursor: none
+
+}
+
+*:hover {
+    cursor: none;
 }
 
 main {
     background-color: #454545;
 }
 
-button {
+
+
+.button {
     background-color: #131313;
     color: white;
+    padding: 5px;
+    cursor: none !important;
 
 }
 
 
+.button:hover {
+    background-color: grey;
+    cursor: none;
+}
+
 
 .snack {
     border-top: 1px solid white;
+
     padding-bottom: 20px;
 
 
@@ -29,13 +44,18 @@ button {
 }
 
 #cursor {
-    transform: rotate(-90deg);
+    transform: scaleX(-1);
     position: fixed;
+
 }
 
+
 .cursor {
-    transform: rotate(-90deg);
+    transform: scaleX(-1);
+
 }
+
+
 
 .big-z {
     z-index: 1000;

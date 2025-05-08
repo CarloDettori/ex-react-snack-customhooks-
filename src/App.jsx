@@ -14,8 +14,8 @@ function App() {
   const currentDate = useDate()
 
   //SNACK 3
-  const iconList = ["🚀", "💉	", "🏈"]
-  const [icon, setIcon] = useState("🚀")
+  const iconList = ["🚀", "🎸", "💉	", "🏈", "🥖", "🦴", "🎤", "🌙"]
+  const [icon, setIcon] = useState("🢅")
   const customPointer = useCustomPointer(icon)
 
   //SNACK BONUS
@@ -29,7 +29,7 @@ function App() {
         <div className='snack-content'>
           <p>Il valore è: </p>
           <h3>{isOn ? "ON" : "OFF"}</h3>
-          <button onClick={toggle}>Switch</button>
+          <button onClick={toggle} className='button'>Switch</button>
         </div>
       </div>
 
@@ -49,7 +49,7 @@ function App() {
           <h3>Sposta il mouse per vedere il cursore personalizzato!</h3>
           {customPointer}
 
-          {iconList.map((icon) => <button onClick={() => { setIcon(icon) }} className="m-1 mt-3 button"><p className="cursor">{icon}</p></button>)}
+          {iconList.map((icon, index) => <button key={index + 1} onClick={() => { setIcon(icon) }} className="m-1 mt-3 button"><p className="cursor">{icon}</p></button>)}
 
           <p>clicca per scegliere un'icona</p>
         </div>
